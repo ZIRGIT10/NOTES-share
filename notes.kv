@@ -1,0 +1,303 @@
+ScreenManager:
+    Home:
+    firstscreen:
+    Login:
+    secscreen:
+    BCAsemfst:
+    BCAsemsec:
+    BCAsemthr:
+    BCAsemfor:
+    BCAsemfiv:
+    BCAsemsix:
+    mathsfst:
+    c_prog:
+    cdffst:
+    communication:
+    pcpack:
+
+<Home>:
+    name:"home"
+    Label:
+        text:"welcome to \nRenaissance University"
+        font_size:"50"
+        bold:"True"
+        color:"#FF5623"
+    AnchorLayout:    
+        anchor_x:"right"
+        anchor_y:"top"    
+        Button:
+            text:"next"
+            color:(0, 0, 0, 1)
+            size_hint :(0.2,0.1)
+            pos:650,550
+            background_color:0,0,0,0
+            on_release:
+                app.root.current = "first"
+                root.manager.transition.direction="left"
+
+<firstscreen>:
+    name:"first"
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 30
+        Image:
+            source:"C:\\Users\\ASUS\\Downloads\\RU NOTES2.png"
+
+         
+        Button:
+            text:"Tab to continue"
+            color:(0, 0, 0, 1)
+            size_hint :(1,0.3)
+            background_color:0,0,0,0
+            on_release:
+                app.root.current = "log"
+                root.manager.transition.direction="left"   
+    AnchorLayout:    
+        anchor_x:"left"
+        anchor_y:"top"                
+        Button:
+            text:"pre"
+            color:(0, 0, 0, 1)
+            size_hint :(0.2,0.1)
+            background_color:0,0,0,0
+            on_release:
+                app.root.current = "home"
+                root.manager.transition.direction="right"              
+
+<Login>:
+    name:"log"
+          
+
+<secscreen>:
+    name:'sec'
+    
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 30
+
+        Button:
+            text:"back"
+            color:(0, 0, 0, 1)
+            background_color:0,0,0,0
+            pos:0,550
+            on_release:
+                app.root.current = "first"
+                root.manager.transition.direction="right"
+        Button:
+            text:"BCA 1st sem"
+            color:(0, 0, 0, 1)
+            on_release:
+                app.root.current = "semfst"
+                root.manager.transition.direction="left"           
+        Button:
+            text:"BCA 2st sem"
+            color:(0, 0, 0, 1)
+            on_release:
+                app.root.current = "semsec"
+                root.manager.transition.direction="left"
+        Button:
+            text:"BCA 3st sem"
+            color:(0, 0, 0, 1)
+            on_release:
+                app.root.current = "semthr"
+                root.manager.transition.direction="left"
+        Button:
+            text:"BCA 4st sem"
+            color:(0, 0, 0, 1)
+            on_release:
+                app.root.current = "semfor"
+                root.manager.transition.direction="left"
+        Button:
+            text:"BCA 5st sem"
+            color:(0, 0, 0, 1)
+            on_release:
+                app.root.current = "semfiv"
+                root.manager.transition.direction="left"
+        Button:
+            text:"BCA 6st sem"
+            color:(0, 0, 0, 1)
+            on_release:
+                app.root.current = "semsix"
+                root.manager.transition.direction="left"      
+
+
+<BCAsemfst>:
+    name:'semfst'
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 30  
+
+        Button:
+            text:"back"
+            color:(0, 0, 0, 1)
+            background_color:0,0,0,0
+            pos:0,550
+            on_release:
+                app.root.current = "sec"
+                root.manager.transition.direction="right"   
+        Button:
+            text:"C progreamming"
+            color:(0, 0, 0, 1)
+            background_color:0,0,0,0
+            on_release:
+                app.root.current = "cprog"
+                root.manager.transition.direction="left"  
+        Button:
+            text:"CDF"
+            color:(0, 0, 0, 1)
+            background_color:0,0,0,0
+            on_release:
+                app.root.current = "cdf"
+                root.manager.transition.direction="left"  
+        Button:
+            text:"PC package"
+            color:(0, 0, 0, 1)
+            background_color:0,0,0,0
+            on_release:
+                app.root.current = "pcpac"
+                root.manager.transition.direction="left"  
+        Button:
+            text:"Maths"
+            color:(0, 0, 0, 1)
+            background_color:0,0,0,0
+            on_release:
+                app.root.current = "mathfst"
+                root.manager.transition.direction="left"  
+        Button:
+            text:"communication"
+            color:(0, 0, 0, 1)
+            background_color:0,0,0,0
+            on_release:
+                app.root.current = "commu"
+                root.manager.transition.direction="left"       
+
+<mathsfst>:
+    name:"mathfst"
+    Button:
+        text:"back"
+        color:(0, 0, 0, 1)
+        background_color:0,0,0,0
+        size_hint :(0.2,0.1)
+        pos:0,550
+        on_release:
+            app.root.current = "semfst"
+            root.manager.transition.direction="right" 
+
+<c_prog>:
+    name:"cprog"
+    Button:
+        color:(0, 0, 0, 1)
+        size_hint :(0.2,0.1)
+        text: 'Open C PDF'
+        on_press: app.cunit1()
+    
+<cdffst>:
+    name:"cdf"
+    Button:
+        text:"back"
+        color:(0, 0, 0, 1)
+        background_color:0,0,0,0
+        size_hint :(0.2,0.1)
+        pos:0,550
+        on_release:
+            app.root.current = "semfst"
+            root.manager.transition.direction="right"
+<communication>:
+    name:"commu"
+    Button:
+        text:"back"
+        color:(0, 0, 0, 1)
+        background_color:0,0,0,0
+        size_hint :(0.2,0.1)
+        pos:0,550
+        on_release:
+            app.root.current = "semfst"
+            root.manager.transition.direction="right"
+<pcpack>:
+    name:"pcpac"
+    Button:
+        text:"back"
+        color:(0, 0, 0, 1)
+        background_color:0,0,0,0
+        size_hint :(0.2,0.1)
+        pos:0,550
+        on_release:
+            app.root.current = "semfst"
+            root.manager.transition.direction="right"       
+
+<BCAsemsec>:        
+    name:'semsec'
+    Label: 
+        text:"unit 2"
+    Button:
+        text:"back"
+        color:(0, 0, 0, 1)
+        background_color:0,0,0,0
+        size_hint :(0.2,0.1)
+        pos:0,550
+        on_release:
+            app.root.current = "sec"
+            root.manager.transition.direction="right"    
+
+<BCAsemthr>:
+    name:'semthr'
+    Label: 
+        text:"unit 3"
+    Button:
+        text:"back"
+        color:(0, 0, 0, 1)
+        background_color:0,0,0,0
+        size_hint :(0.2,0.1)
+        pos:0,550
+        on_release:
+            app.root.current = "sec"
+            root.manager.transition.direction="right"    
+
+<BCAsemfor>:  
+    name:'semfor'
+    Label: 
+        text:"unit 4"  
+    Button:
+        text:"back"
+        color:(0, 0, 0, 1)
+        background_color:0,0,0,0
+        size_hint :(0.2,0.1)
+        pos:0,550
+        on_release:
+            app.root.current = "sec"
+            root.manager.transition.direction="right"      
+
+<BCAsemfiv>:      
+    name:'semfiv'
+    Label: 
+        text:"unit 5"   
+    Button:
+        text:"back"
+        color:(0, 0, 0, 1)
+        background_color:0,0,0,0
+        size_hint :(0.2,0.1)
+        pos:0,550
+        on_release:
+            app.root.current = "sec"
+            root.manager.transition.direction="right"       
+
+<BCAsemsix>:     
+    name:'semsix'
+    Label: 
+        text:"unit 6"
+    Button:
+        text:"back"
+        color:(0, 0, 0, 1)
+        background_color:0,0,0,0
+        size_hint :(0.2,0.1)
+        pos:0,550
+        on_release:
+            app.root.current = "sec"
+            root.manager.transition.direction="right"             
+
+
+                       
+
+    
+     
+        
